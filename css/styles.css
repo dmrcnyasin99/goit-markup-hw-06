@@ -102,6 +102,18 @@ h1 {
     width: 264px;
 }
 
+.strategy ul li h3 {
+    color: var(--navy-blue);
+    font-family: "Roboto" sans-serif;
+        font-size: var(--font-h3);
+        line-height: 1, 2;
+        letter-spacing: 0, 4;
+}
+
+.strategy ul li p, .team ul li p, .portfolio ul li p {
+    color: var(--slate)
+}
+
 .team .title, .portfolio .title {
     font-size: var(--font-h2);
     color: var(--navy-blue);
