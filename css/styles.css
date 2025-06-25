@@ -1,0 +1,54 @@
+root{
+    --iris: #4d5ae5;
+    --ocean: #404BBF;
+    --navy-blue: #2E2F42;
+    --slate: #434455;
+    --light-slate: #8E8F99;
+    --cornflower: #E7E9FC;
+    --cloud: #F4F4FD;
+    --navy-blue-modal: #2E2F42;
+    --grey: #2E2F42;
+    --white: #FFFFFF;
+    --dairy: #FCFCFC;
+    --font-h1: 56px;
+    --font-h2: 36px;
+    --font-h3: 20px;
+    --font-body: 16px;
+    --font-small: 12px;
+    --line-height-h1: 1.07;
+    --letter-spacing-h1: 1,12px;
+}
+
+
+
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    color: var(--iris);
+    font-size: var(--font-h1);
+    line-height: var(--line-height-h1);
+    letter-spacing: var(--letter-spacing-h1);
+    font-weight: bold;
+}
+
+.logo{
+    color: var(--iris);
+    font-family: "Raleway", sans-serif ;
+}
+.logo span{
+    color: #404BBF;
+}
+.order-button {
+    background-color: var(--iris);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.order-button:hover {
+    background-color: var(--ocean);
+}
+
+
