@@ -23,7 +23,14 @@
     --letter-spacing-h2: 0,72px;
 }
 
-* {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul  {
     margin: 0;
     padding: 0;
 }
@@ -35,6 +42,18 @@ body {
     line-height: var(--line-height-body);
     letter-spacing: var(--letter-spacing-body);
 }
+
+.container {
+    max-width: 1158px; }
+
+        header {
+            padding: 16px 0;
+        }
+    
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;     }
 
 h1 {
 
@@ -53,6 +72,13 @@ h1 {
 .logo span {
     color: var(--navy-blue);
 }
+
+.menu ul,
+address ul {
+    display: flex;
+    gap: 48px;
+    padding: 0;
+    align-items: center; }
 
 .menu ul li a, address ul li a {
     color: var(--navy-blue);
@@ -88,14 +114,23 @@ h1 {
     background-color: var(--ocean);
 }
 
+.strategy, .team, .portfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin: 0; }
+
 .strategy {
     width: 1128px;
     margin: 0 auto;
+    padding-top: 120px;
+    padding-top: 120px;
 }
 
 .strategy ul {
     display: flex;
     justify-content: space-between;
+    padding: 0;
+    gap: 24px;
 }
 
 .strategy ul li {
@@ -108,6 +143,7 @@ h1 {
         font-size: var(--font-h3);
         line-height: 1, 2;
         letter-spacing: 0, 4;
+        margin-bottom: 8px;
 }
 
 .strategy ul li p, .team ul li p, .portfolio ul li p {
@@ -121,9 +157,32 @@ h1 {
     letter-spacing: var(--letter-spacing-h2);
     font-weight: bold;
 }
+
+.team .title{
+margin-bottom: 40px;
+}
+
+.portfolio .title {
+margin-bottom: 40px;
+}
+
 .team ul, .portfolio ul {
     background-color: var(--white);
     color: #2E2F42;
+}
+
+.portfolio ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 0;
+    }
+
+.team ul{
+    display: flex;
+        justify-content: space-between;
+        padding: 0;
+        gap: 24px;
 }
 
 .team ul li h3, .portfolio ul li h3 {
@@ -139,7 +198,14 @@ h1 {
     height: 312px;
     background-color: var(--navy-blue);
     color: var(--cloud);
+    padding: 40px 0;
 }
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; }
 
 .logo2 span {
    color: var(--cloud);
