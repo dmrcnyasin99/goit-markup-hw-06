@@ -46,8 +46,8 @@ body {
 .container {
     max-width: 1158px;
     margin: 0 auto;
-        padding-left: 16px;
-        padding-right: 16px
+    padding-left: 16px;
+    padding-right: 16px
 }
 
 header {
@@ -107,15 +107,16 @@ address ul li a:hover {
     text-align: center;
     margin: 0 auto;
     display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-        
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
 }
 
 .hero .title {
     color: var(--white);
+    margin-bottom: 48px;
 }
 
 .order-button {
@@ -133,9 +134,9 @@ address ul li a:hover {
     background-color: var(--ocean);
 }
 
-.team{
+.team {
     background-color: var(--cloud);
-    max-width: 1158px;
+    
 }
 
 .strategy,
@@ -143,7 +144,8 @@ address ul li a:hover {
 .portfolio {
     padding-top: 120px;
     padding-bottom: 120px;
-    margin: 0 auto; }
+    margin: 0 auto;
+}
 
 .strategy ul {
     display: flex;
@@ -183,7 +185,7 @@ address ul li a:hover {
 .team .title {
     margin-bottom: 40px;
     text-align: center;
-    
+
 }
 
 .portfolio .title {
@@ -191,7 +193,11 @@ address ul li a:hover {
     text-align: center;
 }
 
-.team ul,
+.team ul{
+    color: #2E2F42;
+    margin-top: 72px;
+}
+
 .portfolio ul {
     background-color: var(--white);
     color: #2E2F42;
@@ -202,23 +208,37 @@ address ul li a:hover {
     flex-wrap: wrap;
     gap: 24px;
     padding: 0;
+    margin-top: 72px;
 }
 
 .portfolio ul li {
     width: calc((100% - 48px) / 3);
-    border: 1px solid var(--cornflower);
-        border-top: none;
+    border: none;
 }
 
 .portfolio ul li img {
     max-width: 100%;
+    display: block;
 }
+
+.border {
+    border-left: 1px solid var(--cornflower);
+        border-right: 1px solid var(--cornflower);
+        border-bottom: 1px solid var(--cornflower);
+        padding: 16px;
+}
+
 .team ul {
     display: flex;
-    justify-content: space-between;
     padding: 0;
-    gap: 24px;
+    gap:24px;
 }
+
+.team ul li {
+    width: calc((100% - 72px) / 4);
+   background-color: var(--white);
+}
+
 
 .team ul li h3,
 .portfolio ul li h3 {
@@ -230,13 +250,15 @@ address ul li a:hover {
     padding: 16px;
 }
 
-.team ul li h3, .team ul li p {
-text-align: center;
+.team ul li h3,
+.team ul li p {
+    text-align: center;
 }
 
 .portfolio ul li h3 {
     padding: 16px;
-    text-align: left; }
+    text-align: left;
+}
 
 .portfolio ul li p {
     text-align: left;
@@ -244,10 +266,10 @@ text-align: center;
 }
 
 .footer {
-   
-    background-color: transparent;
+
     color: var(--cloud);
     padding: 40px 0;
+    background-color: var(--navy-blue);
 }
 
 .footer-container {
@@ -258,14 +280,11 @@ text-align: center;
     gap: 16px;
     max-width: 1158px;
     padding-left: 16px;
-        padding-right: 16px;
-        background-color: var(--navy-blue);
-        padding-top: 40px;
-        padding-bottom: 40px;
+    padding-right: 16px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .logo2 span {
     color: var(--cloud);
 }
-
-
