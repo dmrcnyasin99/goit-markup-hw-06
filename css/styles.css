@@ -17,7 +17,7 @@
     --font-small: 12px;
     --line-height-body: 1.5;
     --line-height-h1: 1.07;
-    --letter-spacing-body: 0.32px 
+    --letter-spacing-body: 0.32px;
     --letter-spacing-h1: 1.12px;
     --line-height-h2: 1.11;
     --letter-spacing-h2: 0.72px;
@@ -58,6 +58,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1158px;
 }
 
 h1 {
@@ -133,7 +134,8 @@ address ul li a:hover {
 }
 
 .team{
-    color: var(--cloud);
+    background-color: var(--cloud);
+    max-width: 1158px;
 }
 
 .strategy,
@@ -180,10 +182,13 @@ address ul li a:hover {
 
 .team .title {
     margin-bottom: 40px;
+    text-align: center;
+    
 }
 
 .portfolio .title {
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .team ul,
@@ -201,8 +206,13 @@ address ul li a:hover {
 
 .portfolio ul li {
     width: calc((100% - 48px) / 3);
+    border: 1px solid var(--cornflower);
+        border-top: none;
 }
 
+.portfolio ul li img {
+    max-width: 100%;
+}
 .team ul {
     display: flex;
     justify-content: space-between;
@@ -214,26 +224,48 @@ address ul li a:hover {
 .portfolio ul li h3 {
     font-family: "Roboto" sans-serif;
     font-size: var(--font-h3);
-    line-height: 1,2;
-    letter-spacing: 0, 4;
+    line-height: 1.2;
+    letter-spacing: 0.4;
     color: var(--navy-blue);
+    padding: 16px;
+}
+
+.team ul li h3, .team ul li p {
+text-align: center;
+}
+
+.portfolio ul li h3 {
+    padding: 16px;
+    text-align: left; }
+
+.portfolio ul li p {
+    text-align: left;
+    padding: 16px;
 }
 
 .footer {
-    height: 312px;
-    background-color: var(--navy-blue);
+   
+    background-color: transparent;
     color: var(--cloud);
     padding: 40px 0;
 }
 
 .footer-container {
     display: flex;
+    height: 312px;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    text-align: left;
+    max-width: 1158px;
+    padding-left: 16px;
+        padding-right: 16px;
+        background-color: var(--navy-blue);
+        padding-top: 40px;
+        padding-bottom: 40px;
 }
 
 .logo2 span {
     color: var(--cloud);
 }
+
+
