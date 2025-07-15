@@ -93,11 +93,30 @@ address ul {
 address ul li a {
     color: var(--navy-blue);
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu ul li a:hover,
 address ul li a:hover {
     color: var(--ocean);
+}
+
+.menu ul li a.cizgi
+{
+    color: var(--iris);
+    position: relative;
+}
+
+.menu ul li a.cizgi::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--iris);
+    border-radius: 2px;
+    bottom: -20px;
 }
 
 .hero {
@@ -111,7 +130,28 @@ address ul li a:hover {
     justify-content: center;
     align-items: center;
     gap: 24px;
+    background-image:
+           
+            url("../images/office.jpg");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: cover;
+        position: relative;
 
+}
+
+.hero .dark-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2E2F42;
+    opacity: .7;
+}
+
+.hero .container {
+    z-index: 999;
 }
 
 .hero .title {
@@ -128,6 +168,7 @@ address ul li a:hover {
     height: 56px;
     padding: 16px 32px;
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button:hover {
@@ -237,7 +278,11 @@ address ul li a:hover {
 .team ul li {
     width: calc((100% - 72px) / 4);
    background-color: var(--white);
+width: 264px;
+    height: 428px;
 }
+
+
 
 
 .team ul li h3,
@@ -270,21 +315,103 @@ address ul li a:hover {
     color: var(--cloud);
     padding: 40px 0;
     background-color: var(--navy-blue);
+   
 }
+
 
 .footer-container {
     display: flex;
     height: 312px;
-    flex-direction: column;
     align-items: flex-start;
+   
     gap: 16px;
     max-width: 1158px;
     padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+        padding-right: 16px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        
+    }
 
 .logo2 span {
     color: var(--cloud);
 }
+
+
+
+.icon-antenna, .icon-clock, .icon-diagram, .icon-astronaut {
+    width: 64px;
+    height: 64px;
+}
+
+.iconlarim {
+    border: 1px solid #8E8F99;
+    display: flex;
+    width: 264px;
+    height: 112px;
+    gap: 24px;
+    border-radius: 4px;
+    background-color: var(--cloud);
+    justify-content: center;
+    align-items: center;
+    transition:
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+        .sosyal {
+         padding-left: 16px;
+         padding-right: 16px;
+        
+        }
+    
+        .sosyal .sosyal-medya {
+            display: flex;
+            gap: 24px;
+            margin-top: 8px;
+        }
+
+        .sosyal .sosyal-medya .sosyal-medya-item {
+border-radius: 50%;
+list-style-type: none;
+width: 40px;
+height: 40px;
+background-color: #4D5AE5;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        }
+    
+.sosyal .sosyal-medya .sosyal-medya-item .icon-twitter, .icon-instagram, .icon-facebook, .icon-linkedin {
+    width: 16px;
+    height: 16px;
+}
+
+.sosyal-medya-item {
+    transition:
+            background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sosyal-medya-item:hover,
+.sosyal-medya-item:focus {
+    transform: scale(1.1);
+}
+
+.footer-brand{
+ margin-right: 120px;
+}
+
+.footer-brand p , .footer .sosyal-medya {
+    margin-top: 16px;
+}
+
+
+
+
+
+
