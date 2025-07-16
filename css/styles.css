@@ -412,6 +412,44 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 
 
 
+.portfolio-thumb {
+    position: relative;
+    width: 360px;
+    cursor: pointer;
+    overflow: hidden;
+}
 
+.portfolio-thumb img {
+    display: block;
+    width: 100%;
+}
 
+.portfolio-thumb .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--iris);
+    /* iris mavi */
+    color: white;
+    padding: 40px 32px 164px 32px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    display: none;
+}
 
+.portfolio-thumb:hover .overlay {
+    display: block;
+}
+
+.portfolio-thumb .overlay p {
+    color: white;
+font-family: "Roboto", sans-serif;
+    
+    line-height: var(--line-height-body);
+    letter-spacing: var(--letter-spacing-body);
+    font-weight: 400;
+        font-size: 14px;
+}
