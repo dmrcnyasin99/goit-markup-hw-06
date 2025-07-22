@@ -694,35 +694,11 @@ address ul li a:hover {
   fill: var(--iris);
 }
 
-.input-icon-wrapper {
-  position: relative;
-}
-
-.input-icon-wrapper .icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  pointer-events: none;
-  fill: #2e2f42;
-}
 
 
 .input-icon-wrapper input {
   padding-left: 37px !important;
-  width: 360px;
-  height: 40px;
-  box-sizing: border-box;
-  border: 1px solid #2e2f4266;
-  border-radius: 4px;
-  font-size: 16px;
-  color: #2e2f42;
+
 }
 
 
-.input-icon-wrapper input::placeholder {
-  color: #8e8f99;
-  opacity: 1;
-}
