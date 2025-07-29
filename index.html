@@ -31,7 +31,7 @@
               <li><a href="#">Contacts</a></li>
             </ul>
           </nav>
-          <address>
+          <address class="mobil-adres">
             <ul>
               <li>
                 <a href="mailto:info@devstudio.com">info@devstudio.com</a>
@@ -39,6 +39,68 @@
               <li><a href="tel:+110001111111">+11 (000) 111-11-11</a></li>
             </ul>
           </address>
+
+          <!-- Mobil butonu -->
+
+          <input type="checkbox" id="mobil-menu-toggle" hidden />
+          <label for="mobil-menu-toggle" class="menu-button">
+            <label for="mobil-menu-toggle" class="menu-close">✕</label>
+            <svg class="icon icon-menu">
+              <use xlink:href="./images/symbol-defs.svg#icon-menu"></use>
+            </svg>
+          </label>
+
+          <!-- Mobil Menü -->
+          <div class="mobil-menu">
+            <div class="mobil-list">
+              <ul>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contacts</a></li>
+              </ul>
+            </div>
+            <address>
+              <ul>
+                <li>
+                  <a href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li><a href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+              </ul>
+            </address>
+
+            <div class="sosyal">
+              <ul class="sosyal-medya">
+                <li class="sosyal-medya-item">
+                  <svg class="icon icon-instagram">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-instagram"
+                    ></use>
+                  </svg>
+                </li>
+                <li class="sosyal-medya-item">
+                  <svg class="icon icon-twitter">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-twitter"
+                    ></use>
+                  </svg>
+                </li>
+                <li class="sosyal-medya-item">
+                  <svg class="icon icon-facebook">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-facebook"
+                    ></use>
+                  </svg>
+                </li>
+                <li class="sosyal-medya-item">
+                  <svg class="icon icon-linkedin">
+                    <use
+                      xlink:href="./images/symbol-defs.svg#icon-linkedin"
+                    ></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </header>
 
@@ -93,11 +155,13 @@
                 </label>
                 <label>
                   <span>Comment</span>
-                  <textarea
-                    name="comment"
-                    rows="4"
-                    placeholder="Text input"
-                  ></textarea>
+                  <div class="input-icon-wrapper">
+                    <textarea
+                      name="comment"
+                      rows="4"
+                      placeholder="Text input"
+                    ></textarea>
+                  </div>
                 </label>
                 <label class="checkbox">
                   <input type="checkbox" required />
