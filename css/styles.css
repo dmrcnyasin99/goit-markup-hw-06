@@ -44,9 +44,9 @@ body {
 
 .container {
   width: 100%;
-    margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 header {
@@ -54,7 +54,7 @@ header {
 }
 
 .header-container {
-display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -83,17 +83,15 @@ h1 {
 }
 
 
-
-/* Menü butonu */
 .menu-button {
   position: relative;
-   right: 16px;
-  
-    z-index: 1001;
-    cursor: pointer;
+  right: 16px;
+
+  z-index: 1001;
+  cursor: pointer;
 }
 
-/* Mobil menüyü başlangıçta gizle */
+
 .mobil-menu {
   position: fixed;
   top: 0;
@@ -107,8 +105,8 @@ h1 {
   padding: 40px 20px;
 }
 
-/* Checkbox işaretliyse mobil menüyü göster */
-#mobil-menu-toggle:checked+.menu-button+.mobil-menu {
+
+#mobil-menu-toggle:checked + .menu-button + .mobil-menu {
   transform: translateX(0);
 }
 
@@ -131,7 +129,6 @@ h1 {
   color: var(--navy-blue);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .menu ul li a:hover,
@@ -156,7 +153,6 @@ h1 {
   bottom: -20px;
 }
 
-
 .mobil-list {
   padding-bottom: 168px;
 }
@@ -166,76 +162,168 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 40px;
- 
 }
-
 
 .mobil-list ul li a {
   font-size: var(--font-h2);
-    line-height: 1.11px;
-    letter-spacing: 0.72px;
-    transition: color 0.3s ease;
-   
+  line-height: 1.11px;
+  letter-spacing: 0.72px;
+  transition: color 0.3s ease;
 }
 
 .mobil-list ul li a:hover,
 .mobil-list ul li a:focus,
 .mobil-list ul li a:active {
   color: var(--iris);
-  /* Mavi renk */
+  
 }
 
-.mobil-menu address ul  {
-    display: flex;
-      flex-direction: column;
-      gap: 24px;
-      margin-bottom: 48px;
-      transition: color 0.3s ease;
+.mobil-menu address ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+  transition: color 0.3s ease;
 }
 
 .mobil-menu ul a:hover,
 .mobil-menu ul a:focus,
 .mobil-menu ul a:active {
   color: var(--iris);
-  /* Mavi renk */
+  
 }
 
-.menu-close { 
-position: relative;
-right: 16px;
-top: 16px;
-cursor: pointer;
-border: 1px solid #0000001a;
-border-radius: 50%;
-background-color: #e7e9fc;
-width: 24px;
-height: 24px;
-text-align: center;
-line-height: 24px;
-font-size: 14px;
-} 
+.menu-close {
+  position: relative;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+}
 
 .menu-close {
   display: none;
 }
 
-#mobil-menu-toggle:checked+.menu-button .icon-menu {
+#mobil-menu-toggle:checked + .menu-button .icon-menu {
   display: none;
 }
 
-#mobil-menu-toggle:checked+.menu-button .menu-close {
+#mobil-menu-toggle:checked + .menu-button .menu-close {
   display: block;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .container {
+    width: auto;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
+  header {
+    padding: 16px 0;
+    height: 72px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  h1 {
+    font-size: var(--font-h1);
+    line-height: var(--line-height-h1);
+    letter-spacing: var(--letter-spacing-h1);
+    font-weight: bold;
+  }
+
+  .logo,
+  .logo2 {
+    color: var(--iris);
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .logo span {
+    color: var(--navy-blue);
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 48px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  .mobil-adres ul {
+    display: flex;
+    flex-direction: column;
+    /* Alt alta */
+    align-items: flex-end;
+    /* Sağa hizalı */
+    gap: 4px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu ul li a,
+  .mobil-adres ul li a {
+    color: var(--navy-blue);
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu ul li a:hover,
+  .mobil-adres ul li a:hover {
+    color: var(--ocean);
+  }
+
+  .menu ul li a.cizgi {
+    color: var(--iris);
+    position: relative;
+  }
+
+  .menu ul li a.cizgi::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--iris);
+    border-radius: 2px;
+    bottom: -20px;
+  }
+
+  .mobil-menu,
+  .menu-button {
+    display: none;
+  }
+}
 
 .hero {
   width: 100%;
-    margin: 0 auto;
+  margin: 0 auto;
   height: 432px;
   background-color: var(--navy-blue);
   text-align: center;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -296,8 +384,6 @@ font-size: 14px;
   width: 100%;
 }
 
-
-
 .strategy ul {
   display: flex;
   flex-direction: column;
@@ -328,6 +414,41 @@ font-size: 14px;
   color: var(--slate);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .strategy,
+  .strategy ul,
+  .strategy ul li {
+    width: auto;
+  }
+
+  .strategy {
+    margin-bottom: 96px;
+  }
+
+  .strategy ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 sütun */
+    gap: 72px 24px;
+    /* satırlar ve sütunlar arası boşluk */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 312px;
+  }
+
+  .strategy ul li {
+    display: flex;
+    flex-direction: column;
+    width: 356px;
+    height: 120px;
+  }
+
+  .strategy ul li h3 {
+    text-align: left;
+  }
+}
+
 .team .title,
 .portfolio .title {
   font-size: var(--font-h2);
@@ -347,13 +468,10 @@ font-size: 14px;
   text-align: center;
 }
 
-
-
 .team ul {
   color: #2e2f42;
   margin-top: 72px;
 }
-
 
 .border {
   border-left: 1px solid var(--cornflower);
@@ -363,9 +481,9 @@ font-size: 14px;
 }
 
 .team .container {
- padding-left: 28px;
- padding-right: 28px;
- text-align: center;
+  padding-left: 28px;
+  padding-right: 28px;
+  text-align: center;
 }
 
 .team ul {
@@ -373,16 +491,14 @@ font-size: 14px;
   flex-wrap: wrap;
   padding: 0;
   gap: 24px;
- justify-content: center;
+  justify-content: center;
 }
 
 .team ul li {
-  
   background-color: var(--white);
   width: 264px;
   height: 428px;
   margin-bottom: 72px;
-  
 }
 
 .team ul li h3,
@@ -400,6 +516,19 @@ font-size: 14px;
   text-align: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .team,
+  .portfolio {
+    width: auto;
+  }
+
+  .team ul,
+  .portfolio .container ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
 
 .portfolio-container {
   text-align: center;
@@ -412,11 +541,9 @@ font-size: 14px;
   padding: 0;
   margin-top: 72px;
   background-color: var(--white);
-    color: #2e2f42;
-    justify-content: center;
+  color: #2e2f42;
+  justify-content: center;
 }
-
-
 
 .portfolio ul li img {
   max-width: 100%;
@@ -432,8 +559,6 @@ font-size: 14px;
   text-align: left;
   padding: 16px;
 }
-
-
 
 .portfolio-thumb {
   position: relative;
@@ -476,9 +601,6 @@ font-size: 14px;
   font-weight: 400;
   font-size: 14px;
 }
-
-
-
 
 .icon-antenna,
 .icon-clock,
@@ -545,16 +667,13 @@ font-size: 14px;
 .modal h2 {
   margin-top: 50px;
   margin-bottom: 16px;
-  
 }
 
 .modal form {
   margin-top: 16px;
   max-width: 256px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
-
-
 
 .modal form label > span {
   font-family: Roboto, sans-serif;
@@ -578,10 +697,7 @@ font-size: 14px;
   left: 12px;
   width: 18px;
   height: 18px;
-  
 }
-
-
 
 .input-icon-wrapper input {
   padding-left: 40px;
@@ -596,7 +712,6 @@ font-size: 14px;
   border-radius: 4px;
   padding: 8px 12px;
   box-sizing: border-box;
-
 }
 
 .modal form textarea {
@@ -607,7 +722,6 @@ font-size: 14px;
   padding: 8px 12px;
   box-sizing: border-box;
   resize: none;
-  
 }
 
 .modal form input:focus,
@@ -632,8 +746,6 @@ font-size: 14px;
   background-color: var(--ocean);
   transform: scale(1.01);
 }
-
-
 
 .policy {
   color: var(--iris);
@@ -682,6 +794,21 @@ font-size: 14px;
   display: block;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .modal {
+    position: fixed;
+    width: calc(100% - 360px);
+    max-width: 100%;
+    height: 623px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    padding: 24px 16px;
+  }
+}
+
 .footer {
   color: var(--cloud);
   padding-right: 12px;
@@ -712,19 +839,15 @@ font-size: 14px;
 }
 
 .footer-container .sosyal {
-      padding-left: 16px;
-      padding-right: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 16px;
-      margin-top: 72px;
-    
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  margin-top: 72px;
 }
-
-
-
 
 .subscribe-title {
   color: var(--white);
@@ -745,7 +868,7 @@ font-size: 14px;
   color: #333;
   background-color: transparent;
   display: block;
-    margin: auto;
+  margin: auto;
   margin-bottom: 16px;
 }
 
@@ -795,7 +918,6 @@ font-size: 14px;
   display: flex;
   gap: 24px;
   margin-top: 8px;
-  
 }
 
 .sosyal .sosyal-medya .sosyal-medya-item {
@@ -833,11 +955,399 @@ font-size: 14px;
   fill: var(--iris);
 }
 
-
-
 .input-icon-wrapper input {
   padding-left: 37px !important;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 456px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .footer-brand {
+    display: block;
+    margin-top: 75px;
+    padding-left: 50px;
+    max-width: 312px;
+    max-height: 112px;
+  }
+
+  .footer-brand .logo2 {
+    text-align: left;
+  }
+
+  .footer-brand p {
+    text-align: left;
+  }
+
+  .sosyal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 96px;
+  }
+
+  .subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 72px;
+  }
+
+  .subscribe-button {
+    margin: 0;
+  }
+
+  .subscribe-title {
+    text-align: left;
+    padding-left: 45px;
+  }
+
+  .subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    gap: 16px;
+  }
+
+ 
+  .subscribe-input {
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    background-color: transparent;
+    margin-left: 30px;
+ 
+    margin-right: 50px;
+  }
+
+  
+  .subscribe-button {
+    width: 140px;
+    height: 40px;
+    background-color: #4d5ae5;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    padding: 8px 16px;
+    margin-top: 0px;
+    /* ← Yukarıya çeker */
+  }
+
+  .subscribe-button:hover,
+  .subscribe-button:focus {
+    background-color: #404bbf;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: auto;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  header {
+    padding: 0 0;
+    height: 72px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin: 0 auto;
+    padding-left: 156px;
+    padding-right: 156px;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: var(--font-h1);
+    line-height: var(--line-height-h1);
+    letter-spacing: var(--letter-spacing-h1);
+    font-weight: bold;
+  }
+
+  .logo,
+  .logo2 {
+    color: var(--iris);
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .logo span {
+    color: var(--navy-blue);
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 48px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  .mobil-adres ul {
+    display: flex;
+
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu ul li a,
+  .mobil-adres ul li a {
+    color: var(--navy-blue);
+    text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .menu ul li a:hover,
+  .mobil-adres ul li a:hover {
+    color: var(--ocean);
+  }
+
+  .menu ul li a.cizgi {
+    color: var(--iris);
+    position: relative;
+  }
+
+  .menu ul li a.cizgi::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--iris);
+    border-radius: 2px;
+    bottom: -20px;
+  }
+
+  .mobil-menu,
+  .menu-button {
+    display: none;
+  }
+
+  .backdrop {
+    position: fixed;
+    /* absolute değil, fixed olacak */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(46, 47, 66, 0.4);
+    z-index: 999;
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 408px;
+    height: 584px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+  }
+
+  .input-icon-wrapper:focus-within .icon {
+    fill: var(--iris);
+  }
+
+  .input-icon-wrapper input {
+    padding-left: 37px !important;
+  }
+
+  .strategy {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .strategy .container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .strategy ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    height: 224px;
+  }
+
+  .strategy ul li {
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .iconlarim {
+    width: 100%;
+    height: 112px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cloud);
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .icon-antenna,
+  .icon-clock,
+  .icon-diagram,
+  .icon-astronaut {
+    width: 64px;
+    height: 64px;
+    fill: var(--iris);
+  }
+
+  .strategy ul li h3 {
+    color: var(--navy-blue);
+    font-family: "Roboto" sans-serif;
+    font-size: var(--font-h3);
+    line-height: 1.2;
+    letter-spacing: 0.4;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .strategy ul li p,
+  .team ul li p,
+  .portfolio ul li p {
+    color: var(--slate);
+  }
+
+  .team .container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding-left: 28px;
+    padding-right: 28px;
+    text-align: center;
+    
+  }
+
+  .team ul {
+    display: flex;
+    flex-wrap: nowrap;
+    /* 4'ü aynı satırda kalacak */
+    gap: 24px;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .team ul li {
+    background-color: var(--white);
+    width: 264px;
+    height: 428px;
+  }
+  
+.portfolio ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1158px;
+  align-items: center;
+}
+
+.portfolio ul li {
+  width: calc((100% - 48px) / 3);
+  margin-bottom: 24px;
+}
+ 
+.footer {
+ 
+  padding-right: 156px;
+  padding-left: 56px;
+height: 312px;
+ 
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: auto;
+  margin: 0 auto;
+}
+
+.footer-brand {
+width: 264px;
+  
+  margin-right: -40px;
+  
+}
+
+.footer-brand p {
+  width: 264px;
+  height: 72px;
+  overflow: hidden;
+} 
+
+.footer .footer-container .sosyal {
+margin-top: 0px;
+
+}
+
+.subscribe-form {
+  display: flex;
+    flex-direction: row;
+}
+
+ .subscribe-title {
+  margin-top: 5px;
+  text-align: left;
+  margin-left: -27px;
+ }
+ 
+ .subscribe-input {
+  margin-left: -30px;
+ }
+
+.subscribe-button {
+  margin: 0px;
+ margin-left: 30px;
+}
 
 
+
+}
