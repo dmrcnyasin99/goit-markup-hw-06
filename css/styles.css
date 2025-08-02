@@ -1280,12 +1280,20 @@ h1 {
     height: 428px;
   }
   
+.portfolio-thumb {
+  
+  width: 100%;
+ 
+}
+
 .portfolio ul {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1158px;
   align-items: center;
+  margin-left: auto;
+    margin-right: auto;/
 }
 
 .portfolio ul li {
@@ -1308,6 +1316,7 @@ height: 312px;
   align-items: flex-start;
   width: auto;
   margin: 0 auto;
+ height: 100%;
 }
 
 .footer-brand {
